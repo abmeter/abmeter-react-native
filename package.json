@@ -1,0 +1,57 @@
+{
+  "name": "@abmeter/react-native",
+  "version": "0.1.0",
+  "description": "ABMeter React Native SDK — feature flags and A/B experiments over the abmeter JS core, with AsyncStorage + AppState platform adapters",
+  "license": "MIT",
+  "homepage": "https://abmeter.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abmeter/abmeter-react-native.git"
+  },
+  "keywords": [
+    "ab-testing",
+    "feature-flags",
+    "experiments",
+    "abmeter",
+    "react-native",
+    "expo"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "lint": "eslint . && tsc --noEmit"
+  },
+  "peerDependencies": {
+    "abmeter": ">=0.3 <1",
+    "@react-native-async-storage/async-storage": ">=1.19",
+    "react-native": ">=0.72"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "eslint": "^9.17.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}

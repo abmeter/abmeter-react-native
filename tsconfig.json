@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    // DOM is here for the aliased core sources (the browser SDK's own types),
+    // not for this package: adapter code never touches DOM globals.
+    "lib": ["ES2020", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "allowJs": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node"],
+    // The core resolves to the sibling working tree, so the adapter always
+    // builds and tests against current sources. In the public mirror the
+    // mapped file is absent and TypeScript falls back to node_modules — the
+    // registry release bin/publish installs there.
+    "paths": {
+      "abmeter": ["../sdk-js/src/index.ts"]
+    }
+  },
+  "include": ["src", "tests", "types", "tsup.config.ts", "vitest.config.ts"]
+}
