@@ -1,6 +1,6 @@
 {
   "name": "@abmeter/react-native",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ABMeter React Native SDK — feature flags and A/B experiments over the abmeter JS core, with AsyncStorage + AppState platform adapters",
   "license": "MIT",
   "homepage": "https://abmeter.ai",
@@ -42,7 +42,7 @@
     "lint": "eslint . && tsc --noEmit"
   },
   "peerDependencies": {
-    "abmeter": ">=0.3 <1",
+    "abmeter": ">=0.4 <1",
     "@react-native-async-storage/async-storage": ">=1.19",
     "react-native": ">=0.72"
   },
